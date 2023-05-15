@@ -1,0 +1,33 @@
+{
+  "entrypoints": {
+    "app-js": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js.js",
+        "/build/app-js.js"
+      ]
+    },
+    "app": {
+      "js": [
+        "/build/runtime.js",
+        "/build/app.js"
+      ]
+    },
+    "styles/header": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/styles/header.css"
+      ]
+    },
+    "styles/footer": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/styles/footer.css"
+      ]
+    }
+  }
+}

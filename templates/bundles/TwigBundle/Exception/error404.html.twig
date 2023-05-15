@@ -1,0 +1,28 @@
+{% set title = '404' %}
+
+{% extends 'layouts/app.html.twig' %}
+
+{% block content %}
+
+    {% push header %}
+        <meta name="robots" content="noindex, nofollow" >
+    {% endpush %}
+
+    <div class="container padding-top-menu">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <div class="header-item-2">
+                    <h1 class="h4">{{ 'not_found'|trans({}, '404') }}</h1>
+                </div>
+            </div>
+            <div class="col-12">
+                <p>{{ 'not_found_info'|trans({}, '404') }}</p>
+                <a class="btn btn-primary" {% if app.request.locale == 'en' %} href="/en" {% else %} href="/" {% endif %}>{{ 'on_the_main'|trans({}, 'action') }}</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+

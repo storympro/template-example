@@ -1,0 +1,14 @@
+{% macro breadcrumb(text, position, url = null) %}
+    <li {% if url is not defined or url is same as(null) %} class="breadcrumb-item active" {% else %} class="breadcrumb-item" {% endif %} itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+
+        {% if url is not defined or url is same as(null) %}
+            <span itemprop="name" aria-current="page">{{ text }}</span>
+        {% else %}
+            <a itemscope itemtype="https://schema.org/WebPage" itemprop="item" href="{{ url }}" itemid="{{ url }}">
+                <span itemprop="name">{{ text}}</span>
+            </a>
+        {% endif %}
+
+        <meta itemprop="position" content="{{ position }}" >
+    </li>
+{% endmacro %}
