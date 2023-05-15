@@ -10,6 +10,7 @@
 /var/
 /vendor/
 /.idea/*
+/.git/*
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
